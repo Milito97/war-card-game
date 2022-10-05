@@ -9,7 +9,17 @@ public class DoublyLinkList {
    
         public Node(Card card) {  
             this.card = card;  
-        }  
+        }
+
+		public Node getNext() {
+			// TODO Auto-generated method stub
+			return this.next;
+		}
+
+		public Card getData() {
+			// TODO Auto-generated method stub
+			return this.card;
+		}  
     }  
     //Initially, head and tail is set to null
     Node head, tail = null;  
@@ -37,9 +47,36 @@ public class DoublyLinkList {
             //tail's next point to null  
             tail.next = null;  
         }  
-    }  
+    }
+    
+    public Card get(int index){
+        Card data = null;
+        int length = size();
+        Node curr = head;
+        
+        if (index <= length && index >=0){
+            curr = head;
+            for (int count = 0; count < index; count++)
+                curr = curr.getNext();
+            data = curr.getData();    
+        }
+        return data;
+    }
+    
    
-//print all the nodes of doubly linked list  
+    public int size() {
+		Node curr = head;
+		int length = 0;
+
+		while(curr != null) {
+        length++;
+        curr = curr.getNext();
+    }
+
+		return length;
+	}
+
+	//print all the nodes of doubly linked list  
     public void printNodes() {  
         //Node current will point to head  
         Node current = head;  
