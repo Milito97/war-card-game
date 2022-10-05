@@ -9,12 +9,14 @@ public class CardDeck {
 	 */
 	private ArrayList <Card> deck;
 	private int currentCardIndex = -1;
+	DoublyLinkList list;
 	
 	/**
 	 * This constructor initiate the array-list and calls the respective methods to create a new deck
 	 */
 	public CardDeck() {
-		deck = new ArrayList<Card>();
+//		deck = new ArrayList<Card>();
+		
 		createDeck();
 		Collections.shuffle(deck);
 	}
@@ -23,6 +25,9 @@ public class CardDeck {
 	 * This method creates the deck
 	 */
 	private void createDeck() {
+		
+		list = new DoublyLinkList();
+		
 		// suits holds the name of the suits
 		String[] suits = {"Spades", "Diamond", "Clubs", "Hearts"};
 		
@@ -31,7 +36,7 @@ public class CardDeck {
 		 */
 		for (int i = 0 ; i < 4; i++) {
 			for (int j = 1 ; j <=13 ; j++) {
-				deck.add(new Card (j,suits[i]));
+				list.addNode(new Card (j,suits[i]));
 			}
 		}
 		

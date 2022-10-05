@@ -26,9 +26,9 @@ public class WarGame {
 		
 		for (int i = 0; i < gameMenuChoice; i++) {
 			currentPlayer1Card = player1.pop();
-			System.out.println("Player 1 has card " + currentPlayer1Card.getSuit() + "    " + currentPlayer1Card.getRank());
+			System.out.println("Player 1 has card " + currentPlayer1Card.toString() + "    " + currentPlayer1Card.getRank());
 			currentPlayer2Card = player2.pop();
-			System.out.println("Player 2 has card " + currentPlayer2Card.getSuit() + "    " + currentPlayer2Card.getRank() + "\n");
+			System.out.println("Player 2 has card " + currentPlayer2Card.toString() + "    " + currentPlayer2Card.getRank() + "\n");
 			differenceInCards = currentPlayer1Card.compareCards(currentPlayer2Card);
 			
 			if (differenceInCards > 0) {
