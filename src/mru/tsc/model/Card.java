@@ -1,5 +1,6 @@
 package mru.tsc.model;
 
+
 public class Card {
 
 	/**
@@ -74,4 +75,35 @@ public class Card {
 		return name + suit;
 	}
 	
+	public int compareCards(Card o) {
+		int suiteRankCard1 = getRank();
+		int suiteRankCard2 = o.getRank();
+		
+		if(getRank() == o.getRank()) {
+			switch(getSuit()) {
+				case "Spades":
+					suiteRankCard1 = suiteRankCard1 + 40;
+				case "Hearts":
+					suiteRankCard1 = suiteRankCard1 + 30;
+				case "Diamonds":
+					suiteRankCard1 = suiteRankCard1 + 20;
+				case "Clubs":
+					suiteRankCard1 = suiteRankCard1 + 10;
+			}
+			
+			switch(o.getSuit()) {
+				case "Spades":
+					suiteRankCard2 = suiteRankCard2 + 40;
+				case "Hearts":
+					suiteRankCard2 = suiteRankCard2 + 30;
+				case "Diamonds":
+					suiteRankCard2 = suiteRankCard2 + 20;
+				case "Clubs":
+					suiteRankCard2 = suiteRankCard2 + 10;
+			}
+		}
+		return suiteRankCard1 - suiteRankCard2;
+		
+	}
+
 }

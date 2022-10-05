@@ -1,5 +1,6 @@
 package mru.tsc.model;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CardDeck {
 
@@ -15,6 +16,7 @@ public class CardDeck {
 	public CardDeck() {
 		deck = new ArrayList<Card>();
 		createDeck();
+		Collections.shuffle(deck);
 	}
 
 	/**

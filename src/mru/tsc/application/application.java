@@ -4,9 +4,10 @@ import mru.tsc.control.CardController;
 
 public class application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		new CardController();
+		CardController game = new CardController();
+		game.launchApplication();
 		
 		
 	}
