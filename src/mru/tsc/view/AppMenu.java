@@ -13,21 +13,21 @@ public class AppMenu {
 				
 	}
 
-	public String showMainMenu() {
+	public int showMainMenu() {
 		
+		System.out.println("**WELCOME TO WARGAME!!/n");
 		System.out.println("Select one of these options:");
 		System.out.println("1.   Play Game");
 		System.out.println("2.   Shuffle Cards");
 		System.out.println("3.   Exit");
 		System.out.println("Enter your choice: ");
-		String mainMenuChoice = myObj.nextLine();
+		int mainMenuChoice = myObj.nextInt();
 		return mainMenuChoice;		
 		
 	}
 	
 	public int playWarGameDealer() {
 		
-		System.out.println("**WELCOME TO WARGAME!!");
 		System.out.println("");
 		System.out.println("How many cards to deal: ");
 		int dealerChoice = dealObj.nextInt();

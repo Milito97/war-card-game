@@ -1,7 +1,6 @@
+package mru.tsc.model;
 import java.util.ArrayList;
 import java.util.Collections;
-
-import mru.tsc.model.Card;
 
 public class Shuffler {
 
