@@ -11,7 +11,6 @@ public class AppMenu {
 		myObj = new Scanner(System.in);
 		dealObj = new Scanner(System.in);
 				
-	
 	}
 
 	public String showMainMenu() {

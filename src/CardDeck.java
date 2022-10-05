@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import mru.tsc.model.Card;
+
 public class CardDeck {
 
 	/**
