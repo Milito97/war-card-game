@@ -3,8 +3,7 @@ package mru.tsc.model;
 public class DNode<type> {
 	
 	private type data;
-	private DNode<type> next = null;
-	private DNode<type> prev = null;
+	private DNode<type> next, prev = null;
 	
 	public DNode() { 
 	
@@ -38,6 +37,14 @@ public class DNode<type> {
     	return next; 
     	
     }
+
+	public DNode<type> getPrev() {
+		return prev;
+	}
+
+	public void setPrev(DNode<type> prev) {
+		this.prev = prev;
+	}
     
     
 }
