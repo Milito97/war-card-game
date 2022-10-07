@@ -47,7 +47,7 @@ public class DoublyLinkList<type> {
         	start.setPrev(null);  
             //tail's next will be null  
         	end.setNext(null);
-            newNode.setIndex(current.getIndex() + 1);
+            newNode.setIndex(0);
         }  
         else {  
             //add newNode to the end of list. tail->next set to newNode  
@@ -58,7 +58,7 @@ public class DoublyLinkList<type> {
             end = newNode;  
             //tail's next point to null  
             end.setNext(null);
-            newNode.setIndex(0);
+            newNode.setIndex(end.getPrev().getIndex() + 1);
         }  
 	}
 	
