@@ -4,6 +4,7 @@ public class DNode<type> {
 	
 	private type data;
 	private DNode<type> next, prev = null;
+	private int index;
 	
 	public DNode() { 
 	
@@ -44,6 +45,14 @@ public class DNode<type> {
 
 	public void setPrev(DNode<type> prev) {
 		this.prev = prev;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
 	}
     
     

@@ -2,11 +2,10 @@ package mru.tsc.model;
 
 public class DoublyLinkList<type> {
 	
-	private DNode<type> start;
-	private DNode<type> end;
+	private DNode<type> start = null;
+	private DNode<type> end = null;
 	private DNode<type> current;
 	private int size;
-	DNode<type> head, tail = null;
 	
 	
 	public DoublyLinkList(DNode<type> current) {
@@ -42,25 +41,49 @@ public class DoublyLinkList<type> {
 		DNode<type> newNode = new DNode<type>(data);   
    
         //if list is empty, head and tail points to newNode  
-        if(head == null) {  
-            head = tail = newNode;  
+        if(start == null) {  
+        	start = end = newNode;  
             //head's previous will be null  
-            head.setPrev(null);  
+        	start.setPrev(null);  
             //tail's next will be null  
-            tail.setNext(null);  
+        	end.setNext(null);
+            newNode.setIndex(current.getIndex() + 1);
         }  
         else {  
             //add newNode to the end of list. tail->next set to newNode  
-            tail.setNext(newNode);  
+        	end.setNext(newNode);  
             //newNode->previous set to tail  
-            newNode.setPrev(tail);  
+            newNode.setPrev(end);  
             //newNode becomes new tail  
-            tail = newNode;  
+            end = newNode;  
             //tail's next point to null  
-            tail.setNext(null);  
+            end.setNext(null);
+            newNode.setIndex(0);
         }  
 	}
 	
+	public void add(type data) {
+		addNode(data);
+	}
 	
+	public type get(int index) {
+		current = start;
+		
+		if (current == null) {
+			System.out.println("DoublyLinkListt is Empty");
+		}
+		
+		while (current != null) {
+			if (current.getIndex() == index) {
+				return current.getData();
+			} else {
+				current = current.getNext();
+			}
+		}
+		
+		System.out.println("Did not go through while loop to find index");
+		
+		return null;
+	}
 	
 }

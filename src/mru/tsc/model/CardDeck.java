@@ -9,7 +9,7 @@ public class CardDeck {
 	 */
 	private ArrayList <Card> deck;
 	private int currentCardIndex = -1;
-	DoublyLinkList list;
+	DoublyLinkList <Card> list;
 	
 	/**
 	 * This constructor initiate the array-list and calls the respective methods to create a new deck
@@ -26,7 +26,7 @@ public class CardDeck {
 	 */
 	private void createDeck() {
 		
-		list = new DoublyLinkList();
+		list = new DoublyLinkList<Card>(null);
 		
 		// suits holds the name of the suits
 		String[] suits = {"Spades", "Diamond", "Clubs", "Hearts"};
@@ -36,7 +36,7 @@ public class CardDeck {
 		 */
 		for (int i = 0 ; i < 4; i++) {
 			for (int j = 1 ; j <=13 ; j++) {
-				list.addNode(new Card (j,suits[i]));
+				list.add(new Card (j,suits[i]));
 			}
 		}
 		
