@@ -2,38 +2,25 @@ package mru.tsc.model;
 
 public class DoublyLinkList {
 
-	class Node{  
-        Card card;  
-        Node previous;  
-        Node next;  
-   
-        public Node(Card card) {  
-            this.card = card;  
-        }
 
-		public Node getNext() {
-			// TODO Auto-generated method stub
-			return this.next;
-		}
-
-		public Card getData() {
-			// TODO Auto-generated method stub
-			return this.card;
-		}  
-    }  
-    //Initially, head and tail is set to null
-    Node head, tail = null;  
-   
+	//Initially, head and tail is set to null
+	
+	
+	DNode node = new DNode();
+	
+	Card card = new Card(node.getData());
+	
+	
     //add a node to the list  
     public void addNode(Card card) {  
         //Create a new node  
-        Node newNode = new Node(card);  
+    	DNode newNode = new DNode(card);  
    
         //if list is empty, head and tail points to newNode  
         if(head == null) {  
             head = tail = newNode;  
             //head's previous will be null  
-            head.previous = null;  
+            head.prev = null;  
             //tail's next will be null  
             tail.next = null;  
         }  

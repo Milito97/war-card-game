@@ -2,71 +2,63 @@ package mru.tsc.model;
 
 import java.util.EmptyStackException;
 
+import genericinterface.Node;
+
 public class LinkedListStack implements StackInterface<Card>{
 	
-	private Card[] cardArray;
-	private int size;
-	private int top;
-	
-	
-	public LinkedListStack(int size) {
-		cardArray = new Card [size];
-		this.size = size;
-		this.top = -1;
-		
-		
-	}
-	
-	@Override
-	public void push(Card x) {
+	private StackNode<Card> start;
 
-		if (top == size-1) {
-			System.out.println("Stack is full!");
-			
-		}
-		else {
-			top++;
-			cardArray[top] = x;
-		}
+    public LinkedListStack() { start = null; }
+    
+    public boolean isEmpty(){ 
+    	
+    	return (start == null); 
+    
+    }
+
+	@Override
+	public void addAt(int index, type t) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Card pop() {
+	public void addToStart(type t) {
+		// TODO Auto-generated method stub
 		
-		if (!isEmpty()) {
-			Card item = cardArray[top];
-			top--;
-			return item;
-			
-		}
-		
-		else {
-			throw new EmptyStackException();
-		}
-				
 	}
 
 	@Override
-	public Card peek() {
-		return cardArray[top];
-	}
-
-	@Override
-	public boolean isEmpty() {
-		
-		if (top == -1)
-			return true;
-		return false;
+	public void addToEnd(type t) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
-		return top;
+		return 0;
 	}
 
+	@Override
+	public Card removeFromStart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Card removeFromEnd() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Card get(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
+
+
 
 }
