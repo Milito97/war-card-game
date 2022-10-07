@@ -20,8 +20,8 @@ public class WarGame {
 		Card currentPlayer2Card;
 		
 		for (int i = 0;  i < gameMenuChoice; i++) {
-			player1.push(deckOfCards.getNextCard());
-			player2.push(deckOfCards.getNextCard());
+			player1.addAt(deckOfCards.getNextCard());
+			player2.addAt(deckOfCards.getNextCard());
 		}
 		
 		for (int i = 0; i < gameMenuChoice; i++) {

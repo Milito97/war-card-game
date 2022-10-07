@@ -37,9 +37,9 @@ public class DoublyLinkList<type> {
 	public void setSize(int size) {
 		this.size = size;
 	}
-	public void addNode(DNode<type> current) {
+	private void addNode(type data) {
 		//Create a new node  
-		DNode newNode = new DNode(current);   
+		DNode<type> newNode = new DNode<type>(data);   
    
         //if list is empty, head and tail points to newNode  
         if(head == null) {  

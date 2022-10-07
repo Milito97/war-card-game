@@ -1,14 +1,14 @@
 package mru.tsc.model;
 
-import java.util.EmptyStackException;
-
-import genericinterface.Node;
-
 public class LinkedListStack implements StackInterface<Card>{
 	
 	private StackNode<Card> start;
 
-    public LinkedListStack() { start = null; }
+    public LinkedListStack() { 
+    
+    	start = null; 
+    	
+    }
     
     public boolean isEmpty(){ 
     	
@@ -17,19 +17,19 @@ public class LinkedListStack implements StackInterface<Card>{
     }
 
 	@Override
-	public void addAt(int index, type t) {
+	public void addAt(int index, Card t) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void addToStart(type t) {
+	public void addToStart(Card t) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void addToEnd(type t) {
+	public void addToEnd(Card t) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -56,6 +56,12 @@ public class LinkedListStack implements StackInterface<Card>{
 	public Card get(int index) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 
