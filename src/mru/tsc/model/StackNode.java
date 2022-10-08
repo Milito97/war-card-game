@@ -2,16 +2,44 @@ package mru.tsc.model;
 
 public class StackNode<type> {
 	
-    private type data;
-    private StackNode<type> next = null;
+    private StackNode<type> next;
+    private type value;
     
-    public StackNode() { }
-    public StackNode(type data) { this.data=data; }
+   
+	public StackNode(type x, StackNode<type> n) { 
+    		
     
-    public type getData() { return data; }
-    public void setData(type value) { data = value; }
-           
-    public void setNext(StackNode<type> other){ next = other; }
-    public StackNode<type> getNext() { return next; }
+    	value = x;
+    	next = n;
+    	
+    }
+
+
+	public StackNode<type> getNext() {
+		return next;
+	}
+
+
+	public void setNext(StackNode<type> next) {
+		this.next = next;
+	}
+
+
+	public type getValue() {
+		return value;
+	}
+
+
+	public void setValue(type value) {
+		this.value = value;
+	}
+	
+	
+
+    
+    
+
+    
 }
+
 
