@@ -26,14 +26,17 @@ public class CardController {
 			case 1:
 				int gameMenuChoice = menuObject.playWarGameDealer();
 				warGameObject = new WarGame(gameMenuChoice);
-				
+				break;
 				
 			case 2:
-				shufflerObject = new Shuffler(null);
+				System.out.println("Method not implemented yet");
+//				shufflerObject = new Shuffler(null);
+				break;
 				
 			case 3:
 				System.out.println("Thank you for playing War!");
 				flag = false;
+				break;
 				
 			}
 		}

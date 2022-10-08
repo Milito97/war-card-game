@@ -15,7 +15,7 @@ public class AppMenu {
 
 	public int showMainMenu() {
 		
-		System.out.println("**WELCOME TO WARGAME!!/n");
+		System.out.println("**WELCOME TO WARGAME!!\n");
 		System.out.println("Select one of these options:");
 		System.out.println("1.   Play Game");
 		System.out.println("2.   Shuffle Cards");

@@ -43,11 +43,11 @@ public class WarGame {
 		System.out.println("Player 2 has a score of: " + player2Score);
 		
 		if (player1Score > player2Score) {
-			System.out.println("Player 1 Wins!!!!!!!");
+			System.out.println("Player 1 Wins!!!!!!!\n");
 		} else if (player2Score > player1Score) {
-			System.out.println("Player 2 Wins!!!!!!!");
+			System.out.println("Player 2 Wins!!!!!!!\n");
 		} else if (player1Score == player2Score) {
-			System.out.println("Tie Game!!!!!!!");
+			System.out.println("Tie Game!!!!!!!\n");
 		}
 	}
 
