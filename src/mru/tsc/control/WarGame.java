@@ -50,5 +50,6 @@ public class WarGame {
 			System.out.println("Tie Game!!!!!!!");
 		}
 	}
+
 	
 }

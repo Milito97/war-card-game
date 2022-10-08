@@ -11,6 +11,14 @@ public class CardDeck {
 	private int currentCardIndex = -1;
 	DoublyLinkList <Card> list;
 	
+	public DoublyLinkList<Card> getList() {
+		return list;
+	}
+
+	public void setList(DoublyLinkList<Card> list) {
+		this.list = list;
+	}
+
 	/**
 	 * This constructor initiate the array-list and calls the respective methods to create a new deck
 	 */
@@ -18,7 +26,7 @@ public class CardDeck {
 //		deck = new ArrayList<Card>();
 		
 		createDeck();
-		Collections.shuffle(deck);
+//		Collections.shuffle(list);
 	}
 
 	/**
@@ -50,25 +58,26 @@ public class CardDeck {
 		return deck;
 	}
 	
+	
 	/**
 	 * This method keeps track of the next card that comes out of the deck. Eventually it makes sure that the deck is re-shuffled once
 	 * all the cards have been used 
 	 * @return the next card in the deck array list
 	 */
-	public Card getNextCard() {
-		currentCardIndex++;
-		if (currentCardIndex >= (deck.size() - 1)) {
-			currentCardIndex = 0;
-		}
-		return deck.get(currentCardIndex);
-	}
+//	public Card getNextCard() {
+//		currentCardIndex++;
+//		if (currentCardIndex >= (deck.size() - 1)) {
+//			currentCardIndex = 0;
+//		}
+//		return deck.get(currentCardIndex);
+//	}
 	
-	public int getCurrentCardIndex() {
-		return currentCardIndex;
-	}
-	
-	public void setCurrentCardIndex(int currentCardIndex) {
-		this.currentCardIndex = currentCardIndex;
-	}
-	
+//	public int getCurrentCardIndex() {
+//		return currentCardIndex;
+//	}
+//	
+//	public void setCurrentCardIndex(int currentCardIndex) {
+//		this.currentCardIndex = currentCardIndex;
+//	}
+//	
 }
