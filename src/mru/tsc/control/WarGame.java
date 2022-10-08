@@ -9,8 +9,8 @@ public class WarGame {
 	
 	public WarGame(int gameMenuChoice) {
 		
-		LinkedListStack player1 = new LinkedListStack(gameMenuChoice);
-		LinkedListStack player2 = new LinkedListStack(gameMenuChoice);
+		LinkedListStack<Card> player1 = new LinkedListStack<>();
+		LinkedListStack<Card> player2 = new LinkedListStack<>();
 		
 		int player1Score = 0;
 		int player2Score = 0;

@@ -7,14 +7,14 @@ public class application {
 
 	public static void main(String[] args) throws Exception {
 
-//		CardController game = new CardController();
-//		game.launchApplication();
+		CardController game = new CardController();
+		game.launchApplication();
 		
-		CardDeck deck = new CardDeck();
-		
-		for (int i = 0; i < 52 ; i++) {
-			System.out.println(deck.getList().get(i).toString());
-		}
+//		CardDeck deck = new CardDeck();
+//		
+//		for (int i = 0; i < deck.getList().getSize() ; i++) {
+//			System.out.println(deck.getList().get(i).toString());
+//		}
 		
 		
 	}

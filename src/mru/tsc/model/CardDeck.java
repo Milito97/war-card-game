@@ -7,7 +7,7 @@ public class CardDeck {
 	/**
 	 * deck holds all of the cards that currently are in the current deck
 	 */
-	private ArrayList <Card> deck;
+//	private ArrayList <Card> deck;
 	private int currentCardIndex = -1;
 	DoublyLinkList <Card> list;
 	
@@ -54,9 +54,9 @@ public class CardDeck {
 	 * The deck getter method
 	 * @return the deck
 	 */
-	public ArrayList<Card> getDeck() {
-		return deck;
-	}
+//	public ArrayList<Card> getDeck() {
+//		return deck;
+//	}
 	
 	
 	/**
@@ -64,20 +64,19 @@ public class CardDeck {
 	 * all the cards have been used 
 	 * @return the next card in the deck array list
 	 */
-//	public Card getNextCard() {
-//		currentCardIndex++;
-//		if (currentCardIndex >= (deck.size() - 1)) {
-//			currentCardIndex = 0;
-//		}
-//		return deck.get(currentCardIndex);
-//	}
+	public Card getNextCard() {
+		currentCardIndex++;
+		if (currentCardIndex >= (list.getSize() - 1)) {
+			currentCardIndex = 0;
+		}
+		return list.get(currentCardIndex);
+	}
 	
-//	public int getCurrentCardIndex() {
-//		return currentCardIndex;
-//	}
-//	
-//	public void setCurrentCardIndex(int currentCardIndex) {
-//		this.currentCardIndex = currentCardIndex;
-//	}
-//	
+	public int getCurrentCardIndex() {
+		return currentCardIndex;	}
+	
+	public void setCurrentCardIndex(int currentCardIndex) {
+		this.currentCardIndex = currentCardIndex;	
+		}
+	
 }

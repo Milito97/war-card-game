@@ -7,7 +7,7 @@ public class LinkedListStack<T> implements StackInterface<T>{
 	private StackNode<T> top;
 	private int size;
 	
-	public LinkedListStack(int size) { 
+	public LinkedListStack() { 
  
 		size = 0;
 		top = null;

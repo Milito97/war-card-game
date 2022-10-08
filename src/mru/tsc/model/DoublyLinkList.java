@@ -11,6 +11,7 @@ public class DoublyLinkList<type> {
 	public DoublyLinkList(DNode<type> current) {
 		super();
 		this.current = current;
+		this.size = 0;
 	}
 	public DNode<type> getStart() {
 		return start;
@@ -64,6 +65,7 @@ public class DoublyLinkList<type> {
 	
 	public void add(type data) {
 		addNode(data);
+		size++;
 	}
 	
 	public type get(int index) {
