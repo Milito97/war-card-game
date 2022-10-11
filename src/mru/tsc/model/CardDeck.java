@@ -1,5 +1,10 @@
 package mru.tsc.model;
 
+/**
+ * 
+ * @author sriva
+ *
+ */
 public class CardDeck {
 
 	/**

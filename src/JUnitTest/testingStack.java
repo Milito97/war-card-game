@@ -9,14 +9,22 @@ import mru.tsc.model.CardDeck;
 import mru.tsc.model.DoublyLinkList;
 import mru.tsc.model.LinkedListStack;
 
+/**
+ * 
+ * @author sriva
+ *
+ */
 class testingStack {
 
 	
 	private CardDeck deckOfCards = new CardDeck();		
 
-
+	/**
+	 * Tests the pop method that is used by the LinkListStackClass
+	 * @throws Exception
+	 */
 	@Test
-	void testPush() {
+	void testPush() throws Exception{
 		
 		LinkedListStack<Card> testLinkedListPlayer1Hand = new LinkedListStack<Card>();
 		Card object = deckOfCards.getNextCard();
@@ -26,8 +34,13 @@ class testingStack {
 		
 	}
 	
+	
+	/**
+	 * Tests the peek method that is used by the LinkListStackClass, asserts true if what is peeked is equal to what is pushed.
+	 * @throws Exception
+	 */
 	@Test
-	void testPeek() {
+	void testPeek() throws Exception{
 		
 		LinkedListStack<Card> testLinkedListPlayer1Hand = new LinkedListStack<Card>();
 		Card object = deckOfCards.getNextCard();
@@ -37,8 +50,12 @@ class testingStack {
 		
 	}
 	
+	/**
+	 * Tests the pop method that is used by the LinkListStackClass, asserts true if what is popped is the second card that is created.
+	 * @throws Exception
+	 */
 	@Test
-	void testPop() {
+	void testPop() throws Exception{
 		
 		LinkedListStack<Card> testLinkedListPlayer1Hand = new LinkedListStack<Card>();
 		Card card = deckOfCards.getNextCard();
@@ -50,15 +67,22 @@ class testingStack {
 		
 	}
 	
+	/**
+	 * Tests the isEmpty, if it returns true, then it is successful.
+	 * @throws Exception
+	 */
 	@Test
-	void testisEmpty() {
+	void testisEmpty() throws Exception{
 		LinkedListStack<Card> testLinkedListPlayer1Hand = new LinkedListStack<Card>();
 		Assert.assertTrue(testLinkedListPlayer1Hand.isEmpty());
 	}
 	
-	
+	/**
+	 * Tests the size of the linkedlist, if the size is not 0 after an object is pushed, then it asserts true.
+	 * @throws Exception
+	 */
 	@Test
-	void testSize() {
+	void testSize() throws Exception{
 		LinkedListStack<Card> testLinkedList = new LinkedListStack<Card>();
 		Card card = deckOfCards.getNextCard();
 		testLinkedList.push(card);
@@ -67,8 +91,12 @@ class testingStack {
 		
 	}
 	
+	/**
+	 * Tests to see if the doublylinkedlist and the size of the list is not 0.
+	 * @throws Exception
+	 */
 	@Test
-	void testDLLSize() {
+	void testDLLSize() throws Exception{
 		
 		DoublyLinkList<Card> testDoublyLinkedList = new DoublyLinkList<Card>(null);
 		String[] suits = {"Spades", "Diamond", "Clubs", "Hearts"};
@@ -86,9 +114,12 @@ class testingStack {
 	}
 	
 
-	
+	/**
+	 * Tests to see if the first index of the doublylinkedlist is 0 after data has been loaded into it.
+	 * @throws Exception
+	 */
 	@Test
-	void testDLLStart() {
+	void testDLLStart() throws Exception{
 
 		DoublyLinkList<Card> testDoublyLinkedList = new DoublyLinkList<Card>(null);
 		String[] suits = {"Spades", "Diamond", "Clubs", "Hearts"};
@@ -105,8 +136,12 @@ class testingStack {
 		Assert.assertTrue(0 == testDoublyLinkedList.getStart().getIndex());
 	}
 	
+	/**
+	 * Tests to see if the 51st index is at the end of the list.
+	 * @throws Exception
+	 */
 	@Test
-	void testDLLEnd() {
+	void testDLLEnd() throws Exception{
 		DoublyLinkList<Card> testDoublyLinkedList = new DoublyLinkList<Card>(null);
 		String[] suits = {"Spades", "Diamond", "Clubs", "Hearts"};
 		

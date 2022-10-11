@@ -2,23 +2,36 @@ package mru.tsc.model;
 
 import java.util.EmptyStackException;
 
+/**
+ * 
+ * @author sriva
+ *
+ * @param <T>
+ */
 public class LinkedListStack<T> implements StackInterface<T>{
 	
 	private StackNode<T> top;
 	private int size;
 	
+	/**
+	 * 
+	 */
 	public LinkedListStack() { 
  
 		size = 0;
 		top = null;
     	
     }
-	
+	/**
+	 * 
+	 */
 	public void push(T x) {
 		++size;
 		top = new StackNode<T> (x, top); 
 	}
-
+	/**
+	 * 
+	 */
 	public T pop() {
 		
 		if (isEmpty())
@@ -28,16 +41,23 @@ public class LinkedListStack<T> implements StackInterface<T>{
 		size--;
 		return x;	
 	}
-
+	/**
+	 * 
+	 */
 	public T peek () {
 		if (isEmpty()) throw new EmptyStackException();
 		return top.getValue();
 	}
-
+	/**
+	 * 
+	 */
 	public boolean isEmpty() {
 		return (size == 0);
 	}
 	
+	/**
+	 * 
+	 */
 	public int size() {
 		return size;
 	}

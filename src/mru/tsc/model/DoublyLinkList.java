@@ -1,5 +1,10 @@
 package mru.tsc.model;
-
+/**
+ * 
+ * @author sriva
+ *
+ * @param <type>
+ */
 public class DoublyLinkList<type> {
 	
 	private DNode<type> start = null;
@@ -7,36 +12,75 @@ public class DoublyLinkList<type> {
 	private DNode<type> current;
 	private int size;
 	
-	
+	/**
+	 * 
+	 * @param current
+	 */
 	public DoublyLinkList(DNode<type> current) {
 		super();
 		this.current = current;
 		this.size = 0;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public DNode<type> getStart() {
 		return start;
 	}
+	/**
+	 * 
+	 * @param start
+	 */
 	public void setStart(DNode<type> start) {
 		this.start = start;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public DNode<type> getEnd() {
 		return end;
 	}
+	/**
+	 * 
+	 * @param end
+	 */
 	public void setEnd(DNode<type> end) {
 		this.end = end;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public DNode<type> getCurrent() {
 		return current;
 	}
+	/**
+	 * 
+	 * @param current
+	 */
 	public void setCurrent(DNode<type> current) {
 		this.current = current;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public int getSize() {
 		return size;
 	}
+	/**
+	 * 
+	 * @param size
+	 */
 	public void setSize(int size) {
 		this.size = size;
 	}
+	/**
+	 * 
+	 * @param data
+	 */
 	private void addNode(type data) {
 		//Create a new node  
 		DNode<type> newNode = new DNode<type>(data);   
@@ -62,12 +106,19 @@ public class DoublyLinkList<type> {
             newNode.setIndex(end.getPrev().getIndex() + 1);
         }  
 	}
-	
+	/**
+	 * 
+	 * @param data
+	 */
 	public void add(type data) {
 		addNode(data);
 		size++;
 	}
-	
+	/**
+	 * 
+	 * @param index
+	 * @return
+	 */
 	public type get(int index) {
 		current = start;
 		

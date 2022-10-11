@@ -2,7 +2,11 @@ package mru.tsc.model;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.Collections;
-
+/**
+ * 
+ * @author sriva
+ *
+ */
 public class Shuffler {
 
 	public CardDeck Shuffler(CardDeck deckObject) {

@@ -1,5 +1,10 @@
 package mru.tsc.model;
 
+/**
+ * 
+ * @author sriva
+ *
+ */
 
 public class Card {
 
@@ -75,6 +80,11 @@ public class Card {
 		return name + suit;
 	}
 	
+	/**
+	 * 
+	 * @param o
+	 * @return
+	 */
 	public int compareCards(Card o) {
 		int suiteRankCard1 = getRank();
 		int suiteRankCard2 = o.getRank();

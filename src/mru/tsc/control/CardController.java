@@ -3,7 +3,11 @@ package mru.tsc.control;
 import mru.tsc.model.Shuffler;
 import mru.tsc.view.AppMenu;
 
-
+/**
+ * 
+ * @author sriva
+ *
+ */
 public class CardController {
 	
 	
@@ -11,7 +15,10 @@ public class CardController {
 	WarGame warGameObject;
 	Shuffler shufflerObject;
 	
-	
+	/**
+	 * 
+	 * @throws Exception
+	 */
 	public void launchApplication() throws Exception {
 		
 			
@@ -38,7 +45,7 @@ public class CardController {
 					}
 					
 				}
-				
+				break;
 			case 2:
 				System.out.println("Method not implemented yet test");
 //				shufflerObject = new Shuffler(null);

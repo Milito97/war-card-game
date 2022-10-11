@@ -1,12 +1,19 @@
 package mru.tsc.view;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author sriva
+ *
+ */
 public class AppMenu {
 	
 	Scanner myObj;
 	Scanner dealObj;
 	int mainMenuChoice;
 
+	/**
+	 * 
+	 */
 	public AppMenu() {
 		
 		myObj = new Scanner(System.in);
@@ -14,6 +21,10 @@ public class AppMenu {
 	
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int showMainMenu() {
 		
 		while (true) {
@@ -39,6 +50,10 @@ public class AppMenu {
 	    
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public int playWarGameDealer() {
 		
 		System.out.println("");
@@ -47,6 +62,7 @@ public class AppMenu {
 		
 			if (dealObj.hasNextInt()) {
 				int dealerChoice = dealObj.nextInt();
+				dealObj.nextLine();
 				return dealerChoice;
 			}
 		

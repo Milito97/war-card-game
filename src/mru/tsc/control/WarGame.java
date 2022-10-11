@@ -3,13 +3,22 @@ import mru.tsc.model.Card;
 import mru.tsc.model.CardDeck;
 import mru.tsc.model.LinkedListStack;
 import mru.tsc.model.Shuffler;
-
+/**
+ * 
+ * @author sriva
+ *
+ */
 public class WarGame {
 	
 	private CardDeck deckOfCards = new CardDeck();
 	private Shuffler theShuffler = new Shuffler();
 	private CardDeck theNewdeckOfCards = null;
 	
+	/**
+	 * 
+	 * @param actualRank
+	 * @return
+	 */
 	public String rankSuitor(int actualRank) {
 		
 		String theRank = Integer.toString(actualRank);
@@ -29,6 +38,10 @@ public class WarGame {
 		return theRank;
 	}
 	
+	/**
+	 * 
+	 * @param gameMenuChoice
+	 */
 	public WarGame(int gameMenuChoice) {
 		
 		theNewdeckOfCards = theShuffler.Shuffler(deckOfCards);
