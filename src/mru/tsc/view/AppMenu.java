@@ -12,8 +12,9 @@ public class AppMenu {
 	int mainMenuChoice;
 
 	/**
-	 * 
+	 * AppMenu constructor, here the scanners are intialized for the two menus, being the mainmenu and the game menu.
 	 */
+	
 	public AppMenu() {
 		
 		myObj = new Scanner(System.in);

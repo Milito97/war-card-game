@@ -13,15 +13,16 @@ public class WarGame {
 	private CardDeck deckOfCards = new CardDeck();
 	private Shuffler theShuffler = new Shuffler();
 	private CardDeck theNewdeckOfCards = null;
+	private String theRank;
 	
 	/**
-	 * 
-	 * @param actualRank
-	 * @return
+	 * This method allows the proper formatation for the cards, allowing values 1, 11, 12 and 13 to show their respected values.
+	 * @param actualRank, the number that is attatched to the card.
+	 * @return theRank - after the value is parsed into a string, it is then returned. 
 	 */
 	public String rankSuitor(int actualRank) {
 		
-		String theRank = Integer.toString(actualRank);
+		theRank = Integer.toString(actualRank);
 
 		switch (theRank) {
 		case "1":
@@ -39,8 +40,8 @@ public class WarGame {
 	}
 	
 	/**
-	 * 
-	 * @param gameMenuChoice
+	 * The actual WarGame method in which the game is played. 
+	 * @param gameMenuChoice, this value allows the number of hands to be determined and the game to cycle that number of times.
 	 */
 	public WarGame(int gameMenuChoice) {
 		
