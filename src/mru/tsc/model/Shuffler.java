@@ -1,11 +1,21 @@
 package mru.tsc.model;
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.Collections;
 
 public class Shuffler {
 
-	public Shuffler(ArrayList <Card> deck) {
-		Collections.shuffle(deck); 
+	public CardDeck Shuffler(CardDeck deckObject) {
+		
+		CardDeck newShuffledDeck = new CardDeck();
+		
+		for (int i = 0; i < 52; i++) {
+			newShuffledDeck.getList().add(deckObject.getList().get(ThreadLocalRandom.current().nextInt(0, 51)));
+			
+		}
+		
+		return newShuffledDeck;
+		
 	}
 	
 }

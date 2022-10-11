@@ -76,5 +76,7 @@ public class CardDeck {
 	public void setCurrentCardIndex(int currentCardIndex) {
 		this.currentCardIndex = currentCardIndex;	
 		}
+
+	
 	
 }

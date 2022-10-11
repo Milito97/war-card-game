@@ -7,7 +7,4 @@ public interface StackInterface <T> {
 	public boolean isEmpty();
 	public int size();
 	
-
-	
-	
 }

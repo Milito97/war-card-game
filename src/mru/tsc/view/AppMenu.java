@@ -5,33 +5,56 @@ public class AppMenu {
 	
 	Scanner myObj;
 	Scanner dealObj;
+	int mainMenuChoice;
 
 	public AppMenu() {
 		
 		myObj = new Scanner(System.in);
 		dealObj = new Scanner(System.in);
-				
+	
 	}
 
 	public int showMainMenu() {
 		
-		System.out.println("**WELCOME TO WARGAME!!\n");
-		System.out.println("Select one of these options:");
-		System.out.println("1.   Play Game");
-		System.out.println("2.   Shuffle Cards");
-		System.out.println("3.   Exit");
-		System.out.println("Enter your choice: ");
-		int mainMenuChoice = myObj.nextInt();
-		return mainMenuChoice;		
-		
+		while (true) {
+	    System.out.println("Select one of these options:");
+	    System.out.println("1.   Play Game");
+	    System.out.println("2.   Shuffle Cards");
+	    System.out.println("3.   Exit");
+	    System.out.print("Enter your choice: ");
+	    
+	    	if(myObj.hasNextInt()) {
+	    		int mainMenuChoice = myObj.nextInt();
+	    	    return mainMenuChoice;
+	    	}
+	    	
+	    	else {
+	    		System.out.println("");
+	    		System.out.println("Text not allowed, try again.");
+	    		System.out.println("");
+	    		myObj.nextLine();
+	    	}
+	    	
+	    }
+	    
 	}
 	
 	public int playWarGameDealer() {
 		
 		System.out.println("");
-		System.out.println("How many cards to deal: ");
-		int dealerChoice = dealObj.nextInt();
-		return dealerChoice;
+		while (true) {
+		System.out.print("How many cards to deal: ");
+		
+			if (dealObj.hasNextInt()) {
+				int dealerChoice = dealObj.nextInt();
+				return dealerChoice;
+			}
+		
+			else {
+				System.out.println("No text allowed! Try again.");
+				dealObj.nextLine();
+			}
+		}
 	}
 	
 }
