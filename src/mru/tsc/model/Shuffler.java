@@ -23,34 +23,22 @@ public class Shuffler {
 		CardDeck newShuffledDeck = new CardDeck();	    
 		ArrayList<Integer> randomNumberArrayList = new ArrayList<Integer>();
 		
-		boolean flag;
+		for (int i = 0; i < 52; i++) {
+			randomNumberArrayList.add(i);
+		}
+		
 	    int randomNumber;
 		
 		DoublyLinkList<Card> newLinkedList = new DoublyLinkList<Card>(null);	
 		
 		for (int i = 0; i < 52; i++) {
 		
-			randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
-			
-			for (int j = 0; j < randomNumberArrayList.size(); j++) {
-				
-			
-								
-			while(isRepeated(randomNumberArrayList, randomNumber)) {
-				
-				randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
-				
-			}
-			
-			randomNumberArrayList.add(randomNumber);
-				
-			}
+			randomNumber = randomNumberArrayList.remove(ThreadLocalRandom.current().nextInt(0, randomNumberArrayList.size()));
+			newLinkedList.add(deckObject.getList().get(randomNumber));
+		}
 			
 			
 			//randomNumber = randomNumberArrayList.remove(ThreadLocalRandom.current().nextInt(0, randomNumberArrayList.size()));
-			
-			newLinkedList.add(deckObject.getList().get(randomNumber));
-		}
 		
 		newShuffledDeck.setList(newLinkedList);
 		
