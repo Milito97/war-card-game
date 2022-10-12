@@ -37,10 +37,15 @@ public class Shuffler {
 			
 								
 			while(isRepeated(randomNumberArrayList, randomNumber)) {
+				
 				randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
-			}
 				
 			}
+			
+			randomNumberArrayList.add(randomNumber);
+				
+			}
+			
 			
 			//randomNumber = randomNumberArrayList.remove(ThreadLocalRandom.current().nextInt(0, randomNumberArrayList.size()));
 			
