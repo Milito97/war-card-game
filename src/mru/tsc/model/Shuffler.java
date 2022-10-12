@@ -15,22 +15,46 @@ public class Shuffler {
 	 * @return a newshuffledDeck of cards.
 	 */
 	
-	public CardDeck Shuffler(CardDeck deckObject) {
+	//CardDeck deck = new CardDeck();
+	
+	
+	public CardDeck Shuffling(CardDeck deckObject) {
 		
 		CardDeck newShuffledDeck = new CardDeck();
-		int[] intArray = new int[51];
-		int randomNumber;
+	    int[] intArray = new int[52];
+	    boolean flag = true;
+	    int randomNumber;
 		
 		DoublyLinkList<Card> newLinkedList = new DoublyLinkList<Card>(null);	
 		
 		for (int i = 0; i < 52; i++) {
-			
-			
+		
 			randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
 			
-			for (int j = 0; j < intArray.length; i++) {
-				if ()
+			for (int j = 0; j < intArray.length; j++) {
+				
+				flag = true;
+				
+				while(flag) {
+				System.out.println("test");
+				System.out.println(randomNumber);
+				if (isRepeated(intArray, randomNumber)) {
+					
+					randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
+					
+				}
+				
+				else {
+					
+					intArray[j] = randomNumber;
+					flag = false;			
+					System.out.println("random number added");
+				}
+				
 			}
+				
+			}
+			
 			
 			newLinkedList.add(deckObject.getList().get(randomNumber));
 			
@@ -40,6 +64,28 @@ public class Shuffler {
 		newShuffledDeck.setList(newLinkedList);
 		
 		return newShuffledDeck;
+		
+	}
+	
+	public boolean isRepeated(int Array[], int randomNumber) {
+		
+		boolean isRepeated = false;
+		
+		for(int i = 0; i < Array.length; i++) {
+			
+			if (randomNumber == Array[i]) {
+				
+				System.out.println("random number repeated");
+				isRepeated = true;
+				break;
+			}
+	
+		}
+		
+
+		
+		return isRepeated;
+		
 		
 	}
 	

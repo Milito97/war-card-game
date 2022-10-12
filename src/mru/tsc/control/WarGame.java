@@ -48,7 +48,7 @@ public class WarGame {
 	 */
 	public WarGame(int gameMenuChoice) {
 		
-		theNewdeckOfCards = theShuffler.Shuffler(deckOfCards);
+		theNewdeckOfCards = theShuffler.Shuffling(deckOfCards);
 		
 		LinkedListStack<Card> player1 = new LinkedListStack<>();
 		LinkedListStack<Card> player2 = new LinkedListStack<>();
