@@ -20,9 +20,10 @@ public class Shuffler {
 	
 	public CardDeck Shuffling(CardDeck deckObject) {
 		
-		CardDeck newShuffledDeck = new CardDeck();
-	    int[] intArray = new int[52];
-	    boolean flag = true;
+		CardDeck newShuffledDeck = new CardDeck();	    
+		ArrayList<Integer> randomNumberArrayList = new ArrayList<Integer>();
+		
+		boolean flag;
 	    int randomNumber;
 		
 		DoublyLinkList<Card> newLinkedList = new DoublyLinkList<Card>(null);	
@@ -31,23 +32,24 @@ public class Shuffler {
 		
 			randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
 			
-			for (int j = 0; j < intArray.length; j++) {
+			for (int j = 0; j < randomNumberArrayList.size(); j++) {
 				
 				flag = true;
 				
 				while(flag) {
 				System.out.println("test");
-				System.out.println(randomNumber);
-				if (isRepeated(intArray, randomNumber)) {
+				System.out.println(randomNumber + "this is the random number");
+				
+				if (isRepeated(randomNumberArrayList, randomNumber)) {
 					
 					randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
 					
-				}
-				else {
+				} else {
 					
-					intArray[j] = randomNumber;
-					flag = false;			
+					randomNumberArrayList.add(randomNumber);
+					//newLinkedList.add(deckObject.getList().get(randomNumber));
 					System.out.println("random number added");
+					flag = false;
 				}
 				
 			}
@@ -63,24 +65,24 @@ public class Shuffler {
 		
 	}
 	
-	public boolean isRepeated(int Array[], int randomNumber) {
+	public boolean isRepeated(ArrayList<Integer> theArray, int randomNumber) {
 		
-		boolean isRepeated = false;
 		
-		for(int i = 0; i < Array.length; i++) {
+		boolean theValue = false;
+		
+		for(int n = 0; n < theArray.size(); n++) {
 			
-			if (randomNumber == Array[i]) {
+			if (randomNumber == theArray.get(n)) {
 				
+				System.out.println(n + "this is the index");
+				System.out.println(theArray.get(n));
 				System.out.println("random number repeated");
-				isRepeated = true;
-				break;
+				return theValue = true;
 			}
 	
 		}
-		
-
-		
-		return isRepeated;
+	
+		return theValue;
 		
 		
 	}
