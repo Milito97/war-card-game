@@ -34,27 +34,15 @@ public class Shuffler {
 			
 			for (int j = 0; j < randomNumberArrayList.size(); j++) {
 				
-				flag = true;
-				
-				while(flag) {
-				System.out.println("test");
-				System.out.println(randomNumber + "this is the random number");
-				
-				if (isRepeated(randomNumberArrayList, randomNumber)) {
-					
-					randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
-					
-				} else {
-					
-					randomNumberArrayList.add(randomNumber);
-					//newLinkedList.add(deckObject.getList().get(randomNumber));
-					System.out.println("random number added");
-					flag = false;
-				}
-				
+			
+								
+			while(isRepeated(randomNumberArrayList, randomNumber)) {
+				randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
 			}
 				
 			}
+			
+			//randomNumber = randomNumberArrayList.remove(ThreadLocalRandom.current().nextInt(0, randomNumberArrayList.size()));
 			
 			newLinkedList.add(deckObject.getList().get(randomNumber));
 		}
