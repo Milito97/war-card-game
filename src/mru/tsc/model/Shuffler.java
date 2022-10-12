@@ -43,7 +43,6 @@ public class Shuffler {
 					randomNumber = ThreadLocalRandom.current().nextInt(0, 51);
 					
 				}
-				
 				else {
 					
 					intArray[j] = randomNumber;
@@ -55,10 +54,7 @@ public class Shuffler {
 				
 			}
 			
-			
 			newLinkedList.add(deckObject.getList().get(randomNumber));
-			
-			
 		}
 		
 		newShuffledDeck.setList(newLinkedList);
