@@ -1,8 +1,8 @@
 package mru.tsc.model;
 
 /**
- * 
- * @author sriva
+ * This class is what holds the card objects. The suit and rank are their own seperate methods.
+ * @author Emilio G, Nik S.
  *
  */
 
@@ -81,9 +81,9 @@ public class Card {
 	}
 	
 	/**
-	 * 
-	 * @param o
-	 * @return
+	 * This compares cards and determines which rank is higher.
+	 * @param o (card object)
+	 * @return (card object)
 	 */
 	public int compareCards(Card o) {
 		int suiteRankCard1 = getRank();

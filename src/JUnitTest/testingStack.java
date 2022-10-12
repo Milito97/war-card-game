@@ -1,6 +1,7 @@
 package JUnitTest;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -10,9 +11,9 @@ import mru.tsc.model.DoublyLinkList;
 import mru.tsc.model.LinkedListStack;
 
 /**
+ * This class will run all the tests needed for the stack class, such as push, pop and peek. 
+ * @author Emilio G, Nik S.
  * 
- * @author sriva
- *
  */
 class testingStack {
 

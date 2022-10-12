@@ -3,14 +3,14 @@ package mru.tsc.application;
 import mru.tsc.control.CardController;
 
 /**
- * 
- * @author sriva
+ * This is the application class and runs an instance of launchApplication.
+ * @author Emilio G, Nik S.
  *
  */
 public class application {
 
 	/**
-	 * 
+	 * Static void main
 	 * @param args
 	 * @throws Exception
 	 */

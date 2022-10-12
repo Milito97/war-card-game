@@ -1,26 +1,26 @@
 package mru.tsc.model;
 /**
  * 
- * @author sriva
+ * @author Emilio G, Nik S.
  *
- * @param <type>
+ * @param <type> for the type of the DNode.
  */
 public class DNode<type> {
 	
-	private type data;
-	private DNode<type> next, prev = null;
-	private int index;
+	private type data; //data being passed into the node.
+	private DNode<type> next, prev = null; //setting previous and next to null.
+	private int index; //finding the index of the node.
 	
 	/**
-	 * 
+	 * defualt constructor
 	 */
 	public DNode() { 
 	
 	}
     
 	/**
-	 * 
-	 * @param data
+	 * Passes data.
+	 * @param data parameter that acts and treats data as is.
 	 */
 	public DNode(type data) { 
     
@@ -28,8 +28,8 @@ public class DNode<type> {
     }
     
 	/**
-	 * 
-	 * @return
+	 * gets the data for the node.
+	 * @return data - data is returned.
 	 */
     public type getData() { 
     	
@@ -37,8 +37,8 @@ public class DNode<type> {
     	
     }
     /**
-     * 
-     * @param value
+     * sets the data for the node
+     * @param value - data is set.
      */
     public void setData(type value) { 
     	
@@ -46,7 +46,7 @@ public class DNode<type> {
     	
     }
     /**
-     *        
+     * sets the next node to the other variable.  
      * @param other
      */
     public void setNext(DNode<type> other){ 
@@ -55,8 +55,8 @@ public class DNode<type> {
     	
     }
     /**
-     * 
-     * @return
+     * gets the next node.
+     * @return what is next.
      */
     public DNode<type> getNext() { 
     	
@@ -64,29 +64,29 @@ public class DNode<type> {
     	
     }
     /**
-     * 
-     * @return
+     * gets the previous node
+     * @return what is previous.
      */
 	public DNode<type> getPrev() {
 		return prev;
 	}
 	/**
-	 * 
-	 * @param prev
+	 * setting the previous.
+	 * @param prev - sets what is previous.
 	 */
 	public void setPrev(DNode<type> prev) {
 		this.prev = prev;
 	}
 	/**
-	 * 
-	 * @return
+	 * gets the index of the node.
+	 * @return the index - index of node.
 	 */
 	public int getIndex() {
 		return index;
 	}
 	/**
-	 * 
-	 * @param index
+	 * sets the index of the node
+	 * @param the index - index of node.
 	 */
 	public void setIndex(int index) {
 		this.index = index;

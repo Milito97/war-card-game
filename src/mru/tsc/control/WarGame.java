@@ -4,8 +4,10 @@ import mru.tsc.model.CardDeck;
 import mru.tsc.model.LinkedListStack;
 import mru.tsc.model.Shuffler;
 /**
+ * This class is what starts the wargame, the wargame is run and issued per hand. If the number that is entered 5, 
+ * then 5 cards are given per hand.
  * 
- * @author sriva
+ * @author Emilio G, Nik S.
  *
  */
 public class WarGame {
@@ -20,6 +22,7 @@ public class WarGame {
 	 * @param actualRank, the number that is attatched to the card.
 	 * @return theRank - after the value is parsed into a string, it is then returned. 
 	 */
+	
 	public String rankSuitor(int actualRank) {
 		
 		theRank = Integer.toString(actualRank);

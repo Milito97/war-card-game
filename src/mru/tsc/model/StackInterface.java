@@ -1,40 +1,39 @@
 package mru.tsc.model;
 /**
- * 
- * @author sriva
+ * This is an interface that is implemented from the singlylinkedlist.
+ * @author Emilio G, NiK S.
  *
  * @param <T>
  */
 public interface StackInterface <T> {
 
 	/**
-	 * 
-	 * @param x
+	 * Push method intialized.
 	 */
+	
 	public void push (T x);
 	
 	/**
-	 * 
-	 * @return
+	 * Pop method intialized, type generic.
 	 */
+	
 	public T pop();
 	
 	/**
-	 * 
-	 * @return
+	 * Peek method intialized, type generic.
 	 */
 	public T peek();
 	
 	/**
-	 * 
-	 * @return
+	 * isEmpty method intialized, type boolean.
 	 */
+	
 	public boolean isEmpty();
 	
 	/**
-	 * 
-	 * @return
+	 * size method intialized for the interface stack.
 	 */
+	
 	public int size();
 	
 }

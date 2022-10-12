@@ -4,21 +4,22 @@ import mru.tsc.model.Shuffler;
 import mru.tsc.view.AppMenu;
 
 /**
- * 
- * @author sriva
+ * This class is the card controller, this class deals exclusively with launching the application and any means of control through MVC.
+ * @author Emilio G, Nik S.
  *
  */
 public class CardController {
 	
 	
-	AppMenu menuObject;
-	WarGame warGameObject;
-	Shuffler shufflerObject;
+	private AppMenu menuObject; //menuObject to call menu instances.
+	private WarGame warGameObject; //wargameObject to call an instance of wargame.
+	private Shuffler shufflerObject; //shufflerObject to shuffle a deck of cards.
 	
 	/**
-	 * 
+	 * This method is what launches the application, launches the instances of menus's, and then validates them accordingly.
 	 * @throws Exception
 	 */
+	
 	public void launchApplication() throws Exception {
 		
 			
@@ -53,7 +54,7 @@ public class CardController {
 				
 			case 3:
 				System.out.println("Thank you for playing War!");
-				//flag = false;
+				flag = false;
 				break;
 			
 			default:

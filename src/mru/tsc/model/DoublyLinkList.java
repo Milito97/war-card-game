@@ -1,7 +1,9 @@
 package mru.tsc.model;
 /**
  * 
- * @author sriva
+ * This class is a doublylinkedlist and has the methods needed. 
+ * @author 
+ * Emilio G, Nik S.
  *
  * @param <type>
  */
@@ -13,7 +15,7 @@ public class DoublyLinkList<type> {
 	private int size;
 	
 	/**
-	 * 
+	 * Constructor for the DoublyLinkedList
 	 * @param current
 	 */
 	public DoublyLinkList(DNode<type> current) {
@@ -22,64 +24,65 @@ public class DoublyLinkList<type> {
 		this.size = 0;
 	}
 	/**
-	 * 
-	 * @return
+	 * Gets the start of the doublylinklist
+	 * @return start - start of the node for the doublylinkedlist.
 	 */
 	public DNode<type> getStart() {
 		return start;
 	}
 	/**
-	 * 
-	 * @param start
+	 * Sets the start of the doublylinklist
+	 * @param start - start of the node for the doublylink.
 	 */
 	public void setStart(DNode<type> start) {
 		this.start = start;
 	}
 	/**
-	 * 
+	 * Gets the end of the doublylinklist 
 	 * @return
 	 */
 	public DNode<type> getEnd() {
 		return end;
 	}
 	/**
-	 * 
-	 * @param end
+	 * Sets the end of the doublylinklist
+	 * @param end - end node.
 	 */
 	public void setEnd(DNode<type> end) {
 		this.end = end;
 	}
 	/**
-	 * 
-	 * @return
+	 * gets the current node
+	 * @return current - current node.
 	 */
 	public DNode<type> getCurrent() {
 		return current;
 	}
 	/**
-	 * 
-	 * @param current
+	 * Sets the current node 
+	 * @param current - current node.
 	 */
 	public void setCurrent(DNode<type> current) {
 		this.current = current;
 	}
 	/**
-	 * 
-	 * @return
+	 * Gets the size 
+	 * @return size = the size 
 	 */
 	public int getSize() {
 		return size;
 	}
 	/**
-	 * 
-	 * @param size
+	 * Sets the size of the doublylinlist
+	 * @param size - the size variable for the doublylinlist
 	 */
 	public void setSize(int size) {
 		this.size = size;
 	}
+	
 	/**
-	 * 
-	 * @param data
+	 * AddNode will add various data in terms of nodes, assign them to the right node accordingly.
+	 * @param data - data that is passed adn then added as a node.
 	 */
 	private void addNode(type data) {
 		//Create a new node  
@@ -106,8 +109,9 @@ public class DoublyLinkList<type> {
             newNode.setIndex(end.getPrev().getIndex() + 1);
         }  
 	}
+	
 	/**
-	 * 
+	 * add function references addNode increments the size.
 	 * @param data
 	 */
 	public void add(type data) {
@@ -115,9 +119,9 @@ public class DoublyLinkList<type> {
 		size++;
 	}
 	/**
-	 * 
-	 * @param index
-	 * @return
+	 * This method gets the index of the node that is set.
+	 * @param index of the node.
+	 * @return null -> a null value.
 	 */
 	public type get(int index) {
 		current = start;

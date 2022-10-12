@@ -2,14 +2,16 @@ package mru.tsc.view;
 import java.util.Scanner;
 /**
  * 
- * @author sriva
+ * 
+ * @author Emilio G, Nik S.
  *
  */
 public class AppMenu {
 	
-	Scanner myObj;
-	Scanner dealObj;
-	int mainMenuChoice;
+	private Scanner myObj; //scanner defined for the main menu.
+	private Scanner dealObj; //scanner defined for the game menu.
+	private int mainMenuChoice; //the choice that the user chooses in the main menu.
+	private int dealerChoice; //the choice 
 
 	/**
 	 * AppMenu constructor, here the scanners are intialized for the two menus, being the mainmenu and the game menu.
@@ -23,8 +25,7 @@ public class AppMenu {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Main menu for the game.
 	 */
 	public int showMainMenu() {
 		
@@ -36,7 +37,7 @@ public class AppMenu {
 	    System.out.print("Enter your choice: ");
 	    
 	    	if(myObj.hasNextInt()) {
-	    		int mainMenuChoice = myObj.nextInt();
+	    		mainMenuChoice = myObj.nextInt();
 	    	    return mainMenuChoice;
 	    	}
 	    	
@@ -52,8 +53,7 @@ public class AppMenu {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Game menu for the game, or how many cards are dealt to each player.
 	 */
 	public int playWarGameDealer() {
 		

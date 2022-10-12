@@ -1,10 +1,11 @@
 package mru.tsc.model;
 
 /**
- * 
- * @author sriva
+ * Node definied for for the list.
+ *  
+ * @author Emilio G, Nik S.
  *
- * @param <type>
+ * @param <type> generic for whatever kind of list that you would need.
  */
 public class StackNode<type> {
 	
@@ -24,17 +25,16 @@ public class StackNode<type> {
     	
     }
 
-
 	/**
-	 * 
-	 * @return
+	 * Get's the next node
+	 * @return next - next node.
 	 */
 	public StackNode<type> getNext() {
 		return next;
 	}
 
 	/**
-	 * 
+	 * Set's the next node, takes in a next variable that is stacknode type.
 	 * @param next
 	 */
 	public void setNext(StackNode<type> next) {
@@ -42,8 +42,8 @@ public class StackNode<type> {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * gets the value of the node, type generic.
+	 * @return value - 
 	 */
 	public type getValue() {
 		return value;
@@ -51,7 +51,7 @@ public class StackNode<type> {
 
 
 	/**
-	 * 
+	 * set the value of the node.
 	 * @param value
 	 */
 	public void setValue(type value) {
