@@ -31,14 +31,19 @@ public class WarGame {
 		theRank = Integer.toString(actualRank);
 
 		switch (theRank) {
+		
 		case "1":
 			theRank = "A";
+			break;
 		case "11":
 			theRank = "J";
+			break;
 		case "12":
 			theRank = "Q";
+			break;
 		case "13":
 			theRank = "K";
+			break;
 		
 		}
 		
@@ -52,18 +57,19 @@ public class WarGame {
 	public WarGame(int gameMenuChoice) {
 		
 		
-		for (int testT = 0; testT < deckOfCards.getList().getSize(); testT++) {
+//		for (int testT = 0; testT < deckOfCards.getList().getSize(); testT++) {
 
-			System.out.println(deckOfCards.getList().get(testT) + "card "+ testT);
-		}
+			//System.out.println(deckOfCards.getList().get(testT) + "card "+ testT);
+		//}
 		
 		theNewdeckOfCards = theShuffler.Shuffling(deckOfCards);
 		
 		
-		for (int test = 0; test < theNewdeckOfCards.getList().getSize(); test++) {
+		//for (int test = 0; test < theNewdeckOfCards.getList().getSize(); test++) {
 
-			System.out.println(theNewdeckOfCards.getList().get(test) + "card "+ test);
-		}
+			//System.out.println(theNewdeckOfCards.getList().get(test) + "card "+ test);
+		//}
+		
 		
 		LinkedListStack<Card> player1 = new LinkedListStack<>();
 		LinkedListStack<Card> player2 = new LinkedListStack<>();
@@ -75,25 +81,13 @@ public class WarGame {
 		Card currentPlayer1Card;
 		Card currentPlayer2Card;
 		
+		
 		for (int i = 0;  i < gameMenuChoice; i++) {
 			player1.push(theNewdeckOfCards.getNextCard());
+			
 			player2.push(theNewdeckOfCards.getNextCard());
+			
 		}
-		
-		//System.out.println("player 1");
-		
-	//	for (int testPlayer1 = 0; testPlayer1 < player1.size(); testPlayer1++) {
-			
-		//	System.out.println(player1.peek());
-		//}
-		
-		//System.out.println("player 2");
-		
-		//for (int testPlayer2 = 0; testPlayer2 < player2.size(); testPlayer2++) {
-			
-			//System.out.println(player2.peek());
-		//}
-		
 		
 		for (int i = 0; i < gameMenuChoice; i++) {
 			currentPlayer1Card = player1.pop();

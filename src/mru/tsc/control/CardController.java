@@ -1,5 +1,7 @@
 package mru.tsc.control;
 
+import mru.tsc.model.CardDeck;
+
 import mru.tsc.model.Shuffler;
 import mru.tsc.view.AppMenu;
 
@@ -12,8 +14,10 @@ public class CardController {
 	
 	
 	private AppMenu menuObject; //menuObject to call menu instances.
+	private CardDeck testCardDeck = new CardDeck();
+	private CardDeck actualCardDeck = null;
 	private WarGame warGameObject; //wargameObject to call an instance of wargame.
-	private Shuffler shufflerObject; //shufflerObject to shuffle a deck of cards.
+	private Shuffler shufflerObject = new Shuffler(); //shufflerObject to shuffle a deck of cards.
 	
 	/**
 	 * This method is what launches the application, launches the instances of menus's, and then validates them accordingly.
@@ -48,8 +52,16 @@ public class CardController {
 				}
 				break;
 			case 2:
-				System.out.println("Method not implemented yet test");
-//				shufflerObject = new Shuffler(null);
+				
+				actualCardDeck = shufflerObject.Shuffling(testCardDeck);	
+				for (int i = 0; i < 52; i++) {
+					
+					System.out.println(actualCardDeck.getNextCard());
+					
+					
+				}
+				
+				System.out.println("\nDECK HAS BEEN SHUFFLED!!!\n");
 				break;
 				
 			case 3:

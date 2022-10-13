@@ -38,7 +38,6 @@ public class Shuffler {
 		}
 			
 			
-			//randomNumber = randomNumberArrayList.remove(ThreadLocalRandom.current().nextInt(0, randomNumberArrayList.size()));
 		
 		newShuffledDeck.setList(newLinkedList);
 		
