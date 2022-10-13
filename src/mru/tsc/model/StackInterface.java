@@ -3,7 +3,7 @@ package mru.tsc.model;
  * This is an interface that is implemented from the singlylinkedlist.
  * @author Emilio G, NiK S.
  *
- * @param <T>
+ * @param <T> - generic type T.
  */
 public interface StackInterface <T> {
 

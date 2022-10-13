@@ -1,6 +1,6 @@
 package mru.tsc.model;
 /**
- * 
+ * This node is in charge of handling methods associated with our DLL.
  * @author Emilio G, Nik S.
  *
  * @param <type> for the type of the DNode.

@@ -3,7 +3,7 @@ package mru.tsc.model;
 /**
  * This class is the carddeck class, in which a doublylinklist is implemented and then 
  * each card is cycled through it and implemented in the DLL.
- * @author sriva
+ * @author Emilio G, Nik S.
  *
  */
 public class CardDeck {
@@ -11,7 +11,6 @@ public class CardDeck {
 	/**
 	 * deck holds all of the cards that currently are in the current deck
 	 */
-//	private ArrayList <Card> deck;
 	private int currentCardIndex = -1;
 	DoublyLinkList <Card> list;
 	
@@ -35,10 +34,8 @@ public class CardDeck {
 	 * This constructor initiate the array-list and calls the respective methods to create a new deck
 	 */
 	public CardDeck() {
-//		deck = new ArrayList<Card>();
-		
+
 		createDeck();
-//		Collections.shuffle(list);
 	}
 
 	/**

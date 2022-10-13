@@ -15,9 +15,6 @@ public class Shuffler {
 	 * @return a newshuffledDeck of cards.
 	 */
 	
-	//CardDeck deck = new CardDeck();
-	
-	
 	public CardDeck Shuffling(CardDeck deckObject) {
 		
 		CardDeck newShuffledDeck = new CardDeck();	    
@@ -42,28 +39,6 @@ public class Shuffler {
 		newShuffledDeck.setList(newLinkedList);
 		
 		return newShuffledDeck;
-		
-	}
-	
-	public boolean isRepeated(ArrayList<Integer> theArray, int randomNumber) {
-		
-		
-		boolean theValue = false;
-		
-		for(int n = 0; n < theArray.size(); n++) {
-			
-			if (randomNumber == theArray.get(n)) {
-				
-				System.out.println(n + "this is the index");
-				System.out.println(theArray.get(n));
-				System.out.println("random number repeated");
-				return theValue = true;
-			}
-	
-		}
-	
-		return theValue;
-		
 		
 	}
 	

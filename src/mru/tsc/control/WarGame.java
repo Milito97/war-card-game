@@ -26,7 +26,7 @@ public class WarGame {
 	 * @return theRank - after the value is parsed into a string, it is then returned. 
 	 */
 	
-	public String rankSuitor(int actualRank) {
+	public String rankChanger(int actualRank) {
 		
 		theRank = Integer.toString(actualRank);
 
@@ -51,26 +51,42 @@ public class WarGame {
 	}
 	
 	/**
+	 * This method allows for proper formatation for the cards, allowing string values like Hearts, Clubs, Spades, and Diamond to hjave the appropiate number
+	 * of spaces.
+	 * @param actualSuit - the suit string that is being passed as a parameter to assess the number of spaces per word.
+	 * @return
+	 */
+	public String suitChanger(String actualSuit) {
+		
+		String theSuit = actualSuit;
+		
+		switch(theSuit) {
+	
+		case "Clubs":
+			theSuit = "Clubs      ";
+			break;
+		case "Hearts":
+			theSuit = "Hearts     ";
+			break;
+		case "Spades":
+			theSuit = "Spades     ";
+			break;
+		case "Diamond":
+			theSuit = "Diamond    ";
+			break;
+		}
+		
+		return theSuit;
+	}
+	
+	/**
 	 * The actual WarGame method in which the game is played. 
 	 * @param gameMenuChoice, this value allows the number of hands to be determined and the game to cycle that number of times.
 	 */
 	public WarGame(int gameMenuChoice) {
-		
-		
-//		for (int testT = 0; testT < deckOfCards.getList().getSize(); testT++) {
-
-			//System.out.println(deckOfCards.getList().get(testT) + "card "+ testT);
-		//}
-		
+			
 		theNewdeckOfCards = theShuffler.Shuffling(deckOfCards);
-		
-		
-		//for (int test = 0; test < theNewdeckOfCards.getList().getSize(); test++) {
-
-			//System.out.println(theNewdeckOfCards.getList().get(test) + "card "+ test);
-		//}
-		
-		
+	
 		LinkedListStack<Card> player1 = new LinkedListStack<>();
 		LinkedListStack<Card> player2 = new LinkedListStack<>();
 		
@@ -89,11 +105,15 @@ public class WarGame {
 			
 		}
 		
+		System.out.println("");
+		
 		for (int i = 0; i < gameMenuChoice; i++) {
+			
 			currentPlayer1Card = player1.pop();
-			System.out.println("Player 1 has card: " + currentPlayer1Card.getSuit() + "    " + rankSuitor(currentPlayer1Card.getRank()) );
+			System.out.println("Player 1 has card: " + suitChanger(currentPlayer1Card.getSuit()) + rankChanger(currentPlayer1Card.getRank()) );
 			currentPlayer2Card = player2.pop();
-			System.out.println("Player 2 has card: " + currentPlayer2Card.getSuit() + "    " + rankSuitor(currentPlayer2Card.getRank()) + "\n");
+			System.out.println("Player 2 has card: " + suitChanger(currentPlayer2Card.getSuit()) + rankChanger(currentPlayer2Card.getRank()) + "\n");
+			
 			differenceInCards = currentPlayer1Card.compareCards(currentPlayer2Card);
 			
 			if (differenceInCards > 0) {
@@ -105,8 +125,8 @@ public class WarGame {
 		}
 		
 		System.out.println("Player 1 has a score of: " + player1Score);
-		System.out.println("Player 2 has a score of: " + player2Score);
-		
+		System.out.println("Player 2 has a score of: " + player2Score+"\n");
+
 		if (player1Score > player2Score) {
 			System.out.println("Player 1 Wins!!!!!!!\n");
 		} else if (player2Score > player1Score) {

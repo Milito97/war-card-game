@@ -2,7 +2,7 @@ package mru.tsc.view;
 import java.util.Scanner;
 /**
  * 
- * 
+ * This class is in charge of displaiyng all the menu's needed for the wargame program. This class has methods showMainMenu, and playwargamedealer. 
  * @author Emilio G, Nik S.
  *
  */

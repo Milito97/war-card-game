@@ -15,7 +15,7 @@ public class CardController {
 	
 	private AppMenu menuObject; //menuObject to call menu instances.
 	private CardDeck testCardDeck = new CardDeck();
-	private CardDeck actualCardDeck = null;
+	private CardDeck actualCardDeck = null; // a null card deck that will be used to display a deck of shuffled cards.
 	private WarGame warGameObject; //wargameObject to call an instance of wargame.
 	private Shuffler shufflerObject = new Shuffler(); //shufflerObject to shuffle a deck of cards.
 	
@@ -53,11 +53,11 @@ public class CardController {
 				break;
 			case 2:
 				
-				actualCardDeck = shufflerObject.Shuffling(testCardDeck);	
-				for (int i = 0; i < 52; i++) {
+				actualCardDeck = shufflerObject.Shuffling(testCardDeck);
+				System.out.println("");
+				for (int i = 0; i < 5; i++) {
 					
 					System.out.println(actualCardDeck.getNextCard());
-					
 					
 				}
 				
